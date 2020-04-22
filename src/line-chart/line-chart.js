@@ -97,11 +97,6 @@ class LineChart extends AbstractChart {
             key={Math.random()}
             cx={cx}
             cy={cy}
-            fill={
-              typeof getDotColor === "function"
-                ? getDotColor(x, i)
-                : this.getColor(dataset, 0.9)
-            }
             onPress={onPress}
             {...this.getPropsForDots(x, i)}
           />,
@@ -109,7 +104,7 @@ class LineChart extends AbstractChart {
             key={Math.random()}
             cx={cx}
             cy={cy}
-            r="14"
+            r="20"
             fill="#fff"
             fillOpacity={0}
             onPress={onPress}
