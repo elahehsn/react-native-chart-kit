@@ -474,6 +474,7 @@ class LineChart extends AbstractChart {
       withShadow = true,
       withDots = true,
       withInnerLines = true,
+      withInnerLinesVertical= false,
       withOuterLines = true,
       withHorizontalLabels = true,
       withVerticalLabels = true,
@@ -565,7 +566,7 @@ class LineChart extends AbstractChart {
                 : null}
             </G>
             <G>
-              {withInnerLines
+              {withInnerLines && withInnerLinesVertical
                 ? this.renderVerticalLines({
                     ...config,
                     data: data.datasets[0].data,
